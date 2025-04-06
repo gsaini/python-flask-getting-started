@@ -22,4 +22,4 @@ def sse():
     return Response(event_stream(), content_type='text/event-stream')
 
 if __name__ == '__main__':
-    app.run(debug=True, threaded=True, port=5000)
+    app.run(debug=True, threaded=True, port=5000, ssl_context=('cert.pem', 'key.pem'))

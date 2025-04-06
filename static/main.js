@@ -1,4 +1,4 @@
-const source = new EventSource('http://localhost:5000/events');
+const source = new EventSource('https://localhost:5000/events');
 
 /**
  * Parses the JSON string received from an event's data property.
