@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SSE with Python Flask</title>
+</head>
+<body>
+  <h1>Messages from server:</h1>
+  <pre id="output"></pre>
+
+  <script>
+    const source = new EventSource("http://localhost:5000/events");
+
+    source.onmessage = function(event) {
+      const data = JSON.parse(event.data);
+      document.getElementById("output").textContent += 
+        `Message: ${data.message} | Time: ${data.timestamp}\n`;
+    };
+
+    source.onerror = function(err) {
+      console.error("EventSource failed:", err);
+    };
+  </script>
+</body>
+</html>
