@@ -13,10 +13,10 @@ def sse():
     def event_stream():
         while True:
             data = {
-                "message": "Hello from Python server",
-                "timestamp": time.strftime('%Y-%m-%d %H:%M:%S')
+                'message': 'Hello from Python server',
+                'timestamp': time.strftime('%Y-%m-%d %H:%M:%S')
             }
-            yield f"data: {json.dumps(data)}\n\n"
+            yield f'data: {json.dumps(data)}\n\n'
             time.sleep(5)
 
     return Response(event_stream(), content_type='text/event-stream')
