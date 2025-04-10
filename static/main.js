@@ -1,6 +1,6 @@
 // Note: If using HTTPS with a self-signed certificate, ensure the certificate is trusted in your browser.
 // For development, you can switch to HTTP to avoid certificate issues.
-const source = new EventSource('http://localhost:5000/events');
+const source = new EventSource('https://localhost:5000/events');
 
 /**
  * Parses the JSON string received from an event's data property.

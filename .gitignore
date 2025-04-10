@@ -1,1 +1,7 @@
 *.pem
+
+# environemt variables.
+.env
+
+# Python cache
+__pycache__/
