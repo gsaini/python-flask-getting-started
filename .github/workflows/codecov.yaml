@@ -32,9 +32,10 @@ jobs:
         coverage xml
 
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v5
       with:
         token: ${{ secrets.CODECOV_TOKEN }}  # Add this token in your GitHub repository secrets
+        slug: gsaini/python-flask-getting-started
         file: coverage.xml
         flags: unittests
         name: codecov-coverage
