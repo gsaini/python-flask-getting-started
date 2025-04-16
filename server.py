@@ -64,7 +64,8 @@ def sse():
             }
             yield f'data: {json.dumps(data)}\n\n'
             time.sleep(5)
-
+    
+    # This can be achieved through application/ndjson content type as well.
     return Response(event_stream(), content_type='text/event-stream')
 
 if __name__ == '__main__':
